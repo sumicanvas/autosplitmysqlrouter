@@ -1,7 +1,8 @@
 
 ## MySQL Router의 Auto split 포트 : 똑똑한 트래픽 분산 (MySQL 8.4 기준)
 
-과거에는 애플리케이션 코드 레벨에서 두 개의 커넥션 풀(RW용, RO용)을 관리하며 직접 분기 처리를 해야 했습니다. 하지만 MySQL Router의 기능을 잘 활용하면 이 복잡한 과정을 미들웨어단에서 간단하게 해결할 수 있습니다. MySQL Router가 InnoDB Cluster를 Auto Split(자동 분산) 포트를 이용해서 동작하는 기능에 대한 테스트 코드를 파이썬으로 생성하고 테스트했습니다.
+과거에는 애플리케이션 코드 레벨에서 두 개의 커넥션 풀(RW용, RO용)을 관리하며 직접 분기 처리를 해야 했습니다. 하지만 MySQL Router의 기능을 잘 활용하면 이 복잡한 과정을 미들웨어단에서 간단하게 해결할 수 있습니다. MySQL Router가 InnoDB Cluster를 Auto Split(자동 분산) 포트를 이용해서 동작하는 기능에 대한 테스트 코드를 파이썬으로 생성하고 테스트했습니다. README.md와 함께 제공되는 auto_split_test.py 을 참고하시면 됩니다.
+**각 환경에 맞게 DB 정보는 수정해서 사용하셔야 합니다.**  
  **InnoDB Cluster** 환경에서 **MySQL Router**의 역할과, 단일 엔드포인트로 읽기/쓰기를 자동 분산 처리하는 **Auto Split(Read-Write Splitting)** 기능에 대해 설명합니다.
 
 ---
@@ -22,7 +23,7 @@ MySQL Router는 애플리케이션과 InnoDB Cluster 노드들 사이의 **경�
 
 ---
 
-## ⚡ Auto Split (자동 분산)이란?
+## Auto Split (자동 분산)이란?
 
 기존의 방식은 포트를 두 개(R/W 포트, R/O 포트)로 나누어 애플리케이션에서 각각 연결해야 했습니다.
 **Auto Split** (혹은 SQL-aware routing) 기능은 **하나의 포트**로 들어온 트래픽을 분석하여 자동으로 라우팅합니다.
