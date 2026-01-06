@@ -65,7 +65,7 @@ graph TD
 ---
 
 ## 설정 예시 (Configuration)
-<img width="1180" height="932" alt="image" src="https://github.com/user-attachments/assets/2e6e3429-1203-4d97-bb3e-6d11de527b65" />
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/2e6e3429-1203-4d97-bb3e-6d11de527b65" />
 
 
 ```
