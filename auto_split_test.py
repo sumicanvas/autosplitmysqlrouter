@@ -8,7 +8,7 @@ config = {
     'host': '127.0.0.1',       # Router IP
     'port': 6450,              # Auto Split Port
     'user': 'admin',            # MySQL account
-    'password': 'Welcome#1',    # MySQL pwd
+    'password': 'dbpassword',    # MySQL pwd
     'autocommit': True,        
     'use_pure': True
 }
@@ -88,7 +88,7 @@ def run_test():
         sys.exit(1)
 
     # -----------------------------------------------------
-    # 3. READ 테스트 (Secondary로 가야 함)
+    # 3. READ 테스트 (Secondary 확인)
     # -----------------------------------------------------
     print("\n" + "="*30 + "\n")
     print(">>> 2. READ Transaction (Expect: Secondary)")
